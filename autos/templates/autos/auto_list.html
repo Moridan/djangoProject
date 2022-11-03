@@ -1,0 +1,6 @@
+{% include "navigatie.html" %}
+<ul>{% for auto in auto_list %}
+<li><a href = "{% url 'autos:update' auto.pk %}">{{ auto.name }}</a> <a href = "{% url 'autos:delete' auto.pk %}">Delete</a></li>
+{% endfor %}</ul>
+
+<a href = "{% url 'autos:add' %}">Add auto</a>

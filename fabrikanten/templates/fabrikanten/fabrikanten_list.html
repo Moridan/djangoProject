@@ -1,0 +1,6 @@
+{% include "navigatie.html" %}
+<ul>{% for fabrikanten in fabrikanten_list %}
+<li><a href = "{% url 'fabrikanten:update' fabrikanten.pk %}">{{ fabrikanten.name }}</a> <a href = "{% url 'fabrikanten:delete' fabrikanten.pk %}">Delete</a></li>
+{% endfor %}</ul>
+
+<a href = "{% url 'fabrikanten:add' %}">Add fabrikant</a>

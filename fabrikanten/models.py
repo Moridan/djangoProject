@@ -8,5 +8,6 @@ class Fabrikanten(models.Model):
 
     class Meta:
         db_table = "fabrikanten"
+        verbose_name_plural = "Fabrikanten"
     def __str__(self):
         return self.name

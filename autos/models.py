@@ -13,7 +13,7 @@ class Auto(models.Model):
         (DIESEL, 'Diesel')
     )
     name = models.CharField(max_length=256, unique=True)
-    build = models.PositiveIntegerField()
+    build = models.PositiveIntegerField(null=True, blank=True)
     fuel_type = models.CharField(max_length=8, choices=FUEL, default=BENZINE)
     fabrikanten = models.ForeignKey(Fabrikanten, on_delete=models.CASCADE)
 
